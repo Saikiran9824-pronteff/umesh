@@ -1,0 +1,33 @@
+info:
+  version: 1.0.0
+  title: Aptus Finance India Private Limited
+  name: aptus-finance-india-private-limited
+gateways:
+  - datapower-api-gateway
+plans:
+  aptus-finance-india-private-limited:
+    title: Aptus Finance India Private Limited
+    description: Aptus Finance India Private Limited
+    rate-limits:
+      default:
+        value: 100/1second
+    apis:
+      upi-mandate1.0.0: {}
+      upi-mandate-v11.0.0: {}
+apis:
+  upi-mandate1.0.0:
+    $ref: upi-mandate_1.0.0.yaml
+  upi-mandate-v11.0.0:
+    $ref: upi-mandate-v1_1.0.0.yaml
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0

@@ -1,0 +1,32 @@
+info:
+  version: 1.0.0
+  title: ' BAJAJ FINANCE LIMITED – UPI 2.0'
+  name: bajaj-finance-limited-upi-2.0
+gateways:
+  - datapower-api-gateway
+plans:
+  bajaj-finance-limited-upi-2.0:
+    title: ' BAJAJ FINANCE LIMITED – UPI 2.0'
+    description: |-
+
+      BAJAJ FINANCE LIMITED – UPI 2.0
+    rate-limits:
+      default:
+        value: 100/1second
+    apis:
+      upi-mandate-v11.0.0: {}
+apis:
+  upi-mandate-v11.0.0:
+    $ref: upi-mandate-v1_1.0.0.yaml
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0
