@@ -1,0 +1,48 @@
+info:
+  version: 1.0.0
+  title: aml-status
+  name: aml-status
+gateways:
+  - datapower-api-gateway
+plans:
+  default-plan:
+    title: Default Plan
+    description: Default Plan
+    rate-limits:
+      default:
+        value: 100/1hour
+    apis:
+      aml-status1.0.0: {}
+      getcustomerdetails-sync1.0.0: {}
+      payment-enquiry-internaluse1.0.0: {}
+      iblwebservicesoapbindingimplservice-v21.0.0: {}
+      finacle-da-lien-internaluse1.0.0: {}
+      balance-enq-internaluse1.0: {}
+      i_workwrapper_trackwiz_api1.0.0: {}
+apis:
+  aml-status1.0.0:
+    $ref: aml-status_1.0.0.yaml
+  getcustomerdetails-sync1.0.0:
+    $ref: getcustomerdetails-sync_1.0.0.yaml
+  payment-enquiry-internaluse1.0.0:
+    $ref: payment-enquiry-internaluse_1.0.0.yaml
+  iblwebservicesoapbindingimplservice-v21.0.0:
+    $ref: iblwebservicesoapbindingimplservice-v2_1.0.0.yaml
+  finacle-da-lien-internaluse1.0.0:
+    $ref: finacle-da-lien-internaluse_1.0.0.yaml
+  balance-enq-internaluse1.0:
+    $ref: balance-enq-internaluse_1.0.yaml
+  i_workwrapper_trackwiz_api1.0.0:
+    $ref: i_workwrapper_trackwiz_api_1.0.0.yaml
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0
