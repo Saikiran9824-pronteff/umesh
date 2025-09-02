@@ -1,0 +1,34 @@
+info:
+  version: 1.0.0
+  title: EPH-Callback Test
+  name: eph-callback-test
+gateways:
+  - datapower-api-gateway
+plans:
+  eph-upi-callback:
+    title: EPH-UPI-Callback
+    description: EPH-UPI-Callback
+    rate-limits:
+      EPH-UPI-Callback:
+        value: 100/1second
+        hard-limit: false
+    apis:
+      eph-upi-callback-merchants-api-test2.2.0: {}
+      outbound-dec-test1.0.0: {}
+apis:
+  eph-upi-callback-merchants-api-test2.2.0:
+    $ref: eph-upi-callback-merchants-api-test_2.2.0.yaml
+  outbound-dec-test1.0.0:
+    $ref: outbound-dec-test_1.0.0.yaml
+visibility:
+  view:
+    type: public
+    orgs: []
+    tags: []
+    enabled: true
+  subscribe:
+    type: authenticated
+    orgs: []
+    tags: []
+    enabled: true
+product: 1.0.0
